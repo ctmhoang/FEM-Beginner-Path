@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-family: rouge-script, sans-serif;
+  text-align: center;
+  font-size: 3.7vw;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.container h2 {
+  font-family: open-sans;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.blog-col-3, .blog-col-6, .nav-box {
+  border: solid black 1px;
+  padding: 10px;
+}
+.blog-col-3 {
+  width: 25%;
+}
+.blog-col-6 {
+  width: 50%;
+}
+.blog-image {
+  width: 100%
+}
+.nav-box {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0px;
+  padding: 0px;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 1.3vw;
+}
+.nav-link {
+  text-decoration: none;
+  color: #212121;
+  font-size: 6vh;
+  font-weight: 600;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.site-nav-pol {
+  background-color: #3fc5f0;
+}
+.site-nav-tech {
+  background-color: #42dee1;
+}
+.site-nav-loc {
+  background-color: #6decb9;
+}
+.site-nav-opt {
+  background-color: #c3f0ca;
+}
+.site-nav-sport {
+  background-color: #eef5b2;
+}
