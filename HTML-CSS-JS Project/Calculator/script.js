@@ -44,15 +44,12 @@ function handleSymbol(value) {
       break;
     default:
       if (operator === undefined) {
-        operator = value;
         tot = parseInt(buffer);
-        buffer = '';
       } else {
         tot = mathItUp[operator](tot, parseInt(buffer))
-        buffer = '';
-        operator = value;
       }
-
+      buffer = '';
+      operator = value;
   }
 
   function getNewBuffer(total, currentNumber) {
@@ -81,5 +78,8 @@ function displayTot() {
 }
 
 document.querySelector('.cal-box').addEventListener('click', function (event) {
-  getData(event.target.innerText);
+  if (event.target.tagName === 'BUTTON') {
+    getData(event.target.innerText);
+  }
+  event.stopPropagation();
 })

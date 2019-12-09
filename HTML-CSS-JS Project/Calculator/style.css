@@ -1,65 +1,69 @@
 @charset "utf-8";
 /* CSS Document */
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-.body{
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+.body {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
-.cal-box{
-	background-color: #1b2a49;
-	display: flex;
-	flex-flow: row wrap;
-	height: 90vh;
-	width: 60vh;
-	margin: 0;
-	padding: 0;
+.cal-box {
+  background-color: #1b2a49;
+  display: flex;
+  flex-flow: row wrap;
+  height: 90vh;
+  width: 60vh;
+  margin: 0;
+  padding: 0;
 }
-.display-screen,.operator, .num{
-	height: 15vh;
-	padding: 0;
-	border: solid 1px #1b2a49;
+.display-screen, .operator, .num {
+  height: 15vh;
+  padding: 0;
+  border: solid 1px #1b2a49;
 }
-.display-screen{
-	width: 100%;
-	margin: 0;
-	color: aliceblue;
-	font-size: 7.3vh;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
+.display-screen {
+  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+  text-align: right;
+  width: 100%;
+  margin: 0;
+  color: aliceblue;
+  font-size: 7.3vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-bottom: 12px;
 }
-.num, .operator{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 3vh;
-	font-weight: bold;
+.num, .operator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  font-weight: bold;
+  cursor: pointer;
 }
-.num{
-	background-color: #c9d1d3;
+.num {
+  background-color: #c9d1d3;
 }
-.num:hover{
-	background-color: #f9f9f9;
+.num:hover {
+  background-color: #f9f9f9;
 }
-.num:active{
-	background-color: #535353;
+.num:active {
+  background-color: #535353;
 }
-.operator{
-	background-color: #ffd369;
+.operator {
+  background-color: #ffd369;
 }
-.operator:hover{
-	background-color: #ffd739;
+.operator:hover {
+  background-color: #ffd739;
 }
-.operator:active{
-	background-color: #f1bc31;
+.operator:active {
+  background-color: #f1bc31;
 }
-.quarter{
-	width: 25%;
+.quarter {
+  width: 25%;
 }
-.half{
-	width: 50%;
+.half {
+  width: 50%;
 }
-.threequarter{
-	width: 75%;
+.threequarter {
+  width: 75%;
 }
