@@ -37,6 +37,8 @@ function handleSymbol(value) {
       break;
     case '=':
       if (tot === 0) {
+        // tot will be initialized when a operator is clicked
+        // No tot No calculate 
         return;
       }
       getNewBuffer(tot, buffer);
