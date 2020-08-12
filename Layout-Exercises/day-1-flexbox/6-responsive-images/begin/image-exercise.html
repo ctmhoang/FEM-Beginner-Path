@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<!-- visit http://scottjehl.github.io/picturefill/ for picturefill source -->
-	<div class="bkgdimg"></div>
-	<div>
-		<img src="img/peace-pie-original.jpg" alt="The original giant peace pie">
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- visit http://scottjehl.github.io/picturefill/ for picturefill source -->
+    <div class="bkgdimg"></div>
+    <picture>
+      <!-- Must put media query in open-closed parathesis in order to work -->
+      <source srcset="img/peace-pie-original.jpg" media="(min-width:1200px)" />
+      <source srcset="img/peace-pie-500.jpg" media="(min-width:800px)" />
+      <img
+        src="img/peace-pie-150.jpg"
+        alt="Amazin peace cake at the appropriate dimession!"
+      />
+    </picture>
+  </body>
 </html>
