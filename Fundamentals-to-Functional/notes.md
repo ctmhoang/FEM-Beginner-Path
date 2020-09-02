@@ -1,3 +1,2 @@
 - Dot notation use with valid variable names while bracket one must be string number or a expression in it
 - Array can have properties
-- 
