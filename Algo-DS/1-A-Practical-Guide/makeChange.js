@@ -20,8 +20,10 @@ function makeChangeGreedy(coins) {
 }
 
 const makeChangeBruteForce = (coins) => {
+  const cache = [];
   if (!Array.isArray(coins)) return;
   return function bruteforce(amount) {
+    if (cache[amount]) return cache[amount];
     let minTot;
     if (amount <= 0) return 0;
     coins.forEach((val) => {
@@ -30,25 +32,26 @@ const makeChangeBruteForce = (coins) => {
         if (minTot === undefined || currCoin < minTot) minTot = currCoin;
       }
     });
-    return minTot ? minTot : Infinity;
+    cache[amount] = minTot ? minTot : 1;
+    return cache[amount]; // if amount value is less than all coins values
   };
 };
 
-// coin values: 5, 10, 25
+// // coin values: 5, 10, 25
 
-const coins = [5, 10, 20];
-const greedy = makeChangeGreedy(coins);
-const brute = makeChangeBruteForce(coins);
+// const coins = [5, 10, 20];
+// const greedy = makeChangeGreedy(coins);
+// const brute = makeChangeBruteForce(coins);
 
-// input amount: 40 , output # of coins: 3 (25, 10, 5)
+// // input amount: 40 , output # of coins: 3 (25, 10, 5)
 
-console.log(greedy(40));
-console.log(brute(40));
+// console.log(greedy(40));
+// console.log(brute(40));
 
-// input amount: 35, output # of coins: 2 (25, 10)
+// // input amount: 35, output # of coins: 2 (25, 10)
 
-console.log(greedy(35));
-console.log(brute(35));
+// console.log(greedy(35));
+// console.log(brute(35));
 
 // coins value: 1, 6, 10
 const coins2 = [1, 6, 10];
